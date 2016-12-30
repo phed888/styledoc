@@ -1,6 +1,8 @@
 var gulp = require('gulp');
 var data = require('gulp-data'); // access to data files
 var stylus = require('gulp-stylus'); // compile stylus to css
+var jeet = require('jeet'); // grid system for stylus
+var rupture = require('rupture'); // responsive breakpoints for stylus
 var plumber = require('gulp-plumber'); //handles errors in gulp plugins
 var notify = require('gulp-notify'); //error notifications
 var stylint = require('gulp-stylint'); //linter for stylus
@@ -57,15 +59,36 @@ gulp.task('browserSync', function () {
 });
 
 //----------------------------------
-//----- Stylus
+//----- Stylus - Voyager
 //----------------------------------
-gulp.task('stylus', function () {
-    return gulp.src('app/stylus/**/*.styl')
-        .pipe(customPlumber('Stylus Error'))
+gulp.task('voyager', function () {
+    return gulp.src('app/stylus/voyager/style-master.styl')
+        .pipe(customPlumber('Stylus Error in Voyager'))
         .pipe(sourcemaps.init())
-        .pipe(stylus())
-        .pipe(stylint())
+        .pipe(stylus(
+            {use: [jeet(), rupture()]}
+        ))
         .pipe(autoprefixer())
+        .pipe(stylint())
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest('app/css'))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
+});
+
+//----------------------------------
+//----- Stylus - StyleDoc
+//----------------------------------
+gulp.task('styledoc', function () {
+    return gulp.src('app/stylus/__styledoc/styledoc.styl')
+        .pipe(customPlumber('Stylus Error in StyleDoc'))
+        .pipe(sourcemaps.init())
+        .pipe(stylus(
+            {use: [jeet(), rupture()]}
+        ))
+        .pipe(autoprefixer())
+        .pipe(stylint())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('app/css'))
         .pipe(browserSync.reload({
@@ -77,7 +100,8 @@ gulp.task('stylus', function () {
 //----- Watch
 //----------------------------------
 gulp.task('watch', ['browserSync', 'stylus'], function () {
-    gulp.watch('app/stylus/**/*.styl', ['stylus']);
+    gulp.watch('app/stylus/voyager/**/*.styl', ['voyager']);
+    gulp.watch('app/stylus/__styledoc/**/*.styl', ['styledoc']);
     gulp.watch(
         [
         'app/templates/**/*',
@@ -91,5 +115,5 @@ gulp.task('watch', ['browserSync', 'stylus'], function () {
 //----------------------------------
 //----- Default
 //----------------------------------
-gulp.task('default')
+// gulp.task('default')
 

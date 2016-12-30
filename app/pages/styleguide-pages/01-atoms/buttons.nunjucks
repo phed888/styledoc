@@ -1,0 +1,160 @@
+<!-- buttons.html -->
+{% extends "app/templates/base.html" %}
+
+{% block title %}Voyager Styleguide Buttons{% endblock %}
+
+
+{% block header %}
+<!--Navigation-->
+{% import "app/templates/macros/nav-macro.nunjucks" as nav %}
+{{nav.active('buttons')}}
+<!--Header-->
+<div class="page-header atoms">
+	<div class="section-title">
+		<div class="button button__navigation"></div>
+		<span>Atoms</span>
+	</div>
+	<div class="page-title">Buttons</div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="sg-page-content-container">
+	<ul class="sg-page-navigation">
+		<li><a class="scrollLink" href="#Primary-large">Large Primary Button</a></li>
+		<li><a class="scrollLink" href="#Secondary-large">Large Secondary Button</a></li>
+		<li><a class="scrollLink" href="#Tertiary-large">Large Tertiary Button</a></li>
+	</ul>
+	<div class="sg-page-content">
+		<section class="sg-page-section">
+			<div id="Primary-large" class="sg-page-section__title">Primary-large</div>
+			<div class="example-block">
+				<div class="example-title">
+					Large Primary Button
+				</div>
+				<div class="example-grid">
+					<div class="example-cell">
+						<a href="#" class="button-pri">Test button</a>
+						<a href="#" class="button-pri cancel">Test button</a>
+						<div class="usage">
+							<p>&lt;a class="button-pri"&gt;Test button&lt;/a&gt;</p>
+						</div>
+					</div>
+					<div class="example-cell">
+						<input type="button" class="button-pri" value="Test button">
+						<div class="usage">
+							<p>&lt;input type="button" class="button-pri" value="Test button"&gt;</p>
+						</div>
+					</div>
+					<div class="example-cell">
+						<input type="submit" class="button-pri" value="Test button">
+						<div class="usage">
+							<p>&lt;input type="submit" class="button-pri" value="Test button"&gt;</p>
+						</div>
+					</div>
+					<div class="example-cell">
+						<button class="button-pri">Test button</button>
+						<div class="usage">
+							<p>&lt;button class="button-pri"&gt;Test button&lt;/button&gt;</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="example-block">
+				<div class="example-title">
+					Large Primary Button - disabled
+				</div>
+				<div class="example-grid">
+					<div class="example-cell">
+						<a href="#" class="button-pri-disabled">Test button</a>
+						<div class="usage">
+							<p>&lt;a class="button-pri-disabled"&gt;Test button&lt;/a&gt;</p>
+						</div>
+					</div>
+					<div class="example-cell">
+						<input type="button" class="button-pri" value="Test button" disabled="disabled">
+						<div class="usage">
+							<p>&lt;input type="button" class="button-pri" value="Test button" disabled="disabled"&gt;</p>
+						</div>
+					</div>
+					<div class="example-cell">
+						<input type="submit" class="button-pri" value="Test button" disabled="disabled">
+						<div class="usage">
+							<p>&lt;input type="submit" class="button-pri" value="Test button" disabled="disabled"&gt;</p>
+						</div>
+					</div>
+					<div class="example-cell">
+						<button class="button-pri" disabled="disabled">Test button</button>
+						<div class="usage">
+							<p>&lt;button class="button-pri" disabled="disabled"&gt;Test button&lt;/button&gt;</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="Secondary-large" class="sg-page-section__title">Secondary-large</div>
+			<div class="example-block">
+				<div class="example-title">
+					Large Secondary Button
+				</div>
+				<div class="example-grid">
+					<div class="example-cell">
+						<a href="#" class="button-sec">Test button</a>
+						<div class="usage">
+							<p>&lt;a class="button-sec"&gt;Test button&lt;/a&gt;</p>
+						</div>
+					</div>
+					<div class="example-cell">
+						<input type="button" class="button-sec" value="Test button">
+						<div class="usage">
+							<p>&lt;input type="button" class="button-sec" value="Test button"&gt;</p>
+						</div>
+					</div>
+					<div class="example-cell">
+						<input type="submit" class="button-sec" value="Test button">
+						<div class="usage">
+							<p>&lt;input type="submit" class="button-sec" value="Test button"&gt;</p>
+						</div>
+					</div>
+					<div class="example-cell">
+						<button class="button-sec">Test button</button>
+						<div class="usage">
+							<p>&lt;button class="button-sec"&gt;Test button&lt;/button&gt;</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="example-block">
+				<div class="example-title">
+					Large Secondary Button - disabled
+				</div>
+				<div class="example-grid">
+					<div class="example-cell">
+						<a href="#" class="button-sec-disabled">Test button</a>
+						<div class="usage">
+							<p>&lt;a class="button-sec-disabled"&gt;Test button&lt;/a&gt;</p>
+						</div>
+					</div>
+					<div class="example-cell">
+						<input type="button" class="button-sec" value="Test button" disabled="disabled">
+						<div class="usage">
+							<p>&lt;input type="button" class="button-sec" value="Test button" disabled="disabled"&gt;</p>
+						</div>
+					</div>
+					<div class="example-cell">
+						<input type="submit" class="button-sec" value="Test button" disabled="disabled">
+						<div class="usage">
+							<p>&lt;input type="submit" class="button-sec" value="Test button" disabled="disabled"&gt;</p>
+						</div>
+					</div>
+					<div class="example-cell">
+						<button class="button-sec" disabled="disabled">Test button</button>
+						<div class="usage">
+							<p>&lt;button class="button-sec" disabled="disabled"&gt;Test button&lt;/button&gt;</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+{% endblock %}

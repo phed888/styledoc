@@ -1,0 +1,55 @@
+<!-- buttons.html -->
+{% extends "app/templates/base.html" %}
+
+{% block title %}Voyager Styleguide Icons{% endblock %}
+
+
+{% block header %}
+<!--Navigation-->
+{% import "app/templates/macros/nav-macro.nunjucks" as nav %}
+{{nav.active('icons')}}
+<!--Header-->
+<div class="page-header atoms">
+	<div class="section-title">
+		<div class="button button__navigation"></div>
+		<span>Atoms</span>
+	</div>
+	<div class="page-title">Icons</div>
+</div>
+{% endblock %}
+
+
+{% block content %}
+<div class="sg-page-content-container">
+	<ul class="sg-page-navigation">
+		<li><a href="#intro-text" class="scrollLink">Introduction</a></li>
+		<li><a class="scrollLink" href="#Attributes">Attributes</a></li>
+		<li><a class="scrollLink" href="#Actions">Actions</a></li>
+		<li><a class="scrollLink" href="#Products">Products</a></li>
+		<li><a class="scrollLink" href="#Controls">Controls</a></li>
+		<li><a class="scrollLink" href="#Status">Status</a></li>
+	</ul>
+	<div class="sg-page-content">
+		<div id="intro-text" class="sg-introduction">
+			Icons can enhance an experience by informing users of an interaction, providing context and sometimes replacing content altogether. Icons should inform and clarify. Avoid using icons as a purely visual element.
+			Our icons are rendered using a custom SVG icon font instead of an image sprite. This reduces page weight, provides resolution independence and makes the icons easy to implement (you can apply most CSS rules for basic text).
+		</div>
+		{% for category in icons %}
+			<section class="sg-page-section">
+			<div id="{{category.type}}"class="sg-page-section__title">{{category.type}}</div>
+			{% for icon in category.list %}
+				<div class="example-block icons">
+					<div class="example-title">{{icon.name}}</div>
+					<div class="icon-example">
+						<span class="icon icon__{{icon.name}}"></span>
+					</div>
+					<div class="icon-unicode">
+						<p>{{ icon.unicode }}</p>
+					</div>
+				</div>
+			{% endfor %}
+			</section>
+		{% endfor %}
+	</div>
+</div>
+{% endblock %}

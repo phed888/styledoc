@@ -1,0 +1,429 @@
+{
+  "icons": [
+    {
+      "type": "Attributes",
+      "list": [
+        {
+          "name": "travelers",
+          "unicode": "e000"
+        },
+        {
+          "name": "traveler",
+          "unicode": "e001"
+        },
+        {
+          "name": "time",
+          "unicode": "e002"
+        },
+        {
+          "name": "timealt",
+          "unicode": "e02b"
+        },
+        {
+          "name": "notime",
+          "unicode": "e003"
+        },
+        {
+          "name": "roundtrip",
+          "unicode": "e004"
+        },
+        {
+          "name": "roundtripalt",
+          "unicode": "e02c"
+        },
+        {
+          "name": "location",
+          "unicode": "e006"
+        },
+        {
+          "name": "locationalt",
+          "unicode": "e02d"
+        },
+        {
+          "name": "phone",
+          "unicode": "e007"
+        },
+        {
+          "name": "mail",
+          "unicode": "e009"
+        },
+        {
+          "name": "mobile",
+          "unicode": "e012"
+        },
+        {
+          "name": "calendar",
+          "unicode": "e014"
+        },
+        {
+          "name": "calendaralt",
+          "unicode": "e02a"
+        },
+        {
+          "name": "luggage",
+          "unicode": "e015"
+        },
+        {
+          "name": "map",
+          "unicode": "e016"
+        },
+        {
+          "name": "viewed",
+          "unicode": "e017"
+        },
+        {
+          "name": "overnight",
+          "unicode": "e018"
+        },
+        {
+          "name": "oneway",
+          "unicode": "e019"
+        },
+        {
+          "name": "walk",
+          "unicode": "e01a"
+        },
+        {
+          "name": "sun",
+          "unicode": "e01c"
+        },
+        {
+          "name": "sunalt",
+          "unicode": "e01d"
+        },
+        {
+          "name": "seat",
+          "unicode": "e026"
+        },
+        {
+          "name": "star",
+          "unicode": "e038"
+        },
+        {
+          "name": "halfstar",
+          "unicode": "e036"
+        },
+        {
+          "name": "rss",
+          "unicode": "e037"
+        },
+        {
+          "name": "heart",
+          "unicode": "e03b"
+        },
+        {
+          "name": "heartalt",
+          "unicode": "e03a"
+        },
+        {
+          "name": "trend",
+          "unicode": "e040"
+        },
+        {
+          "name": "cardoors",
+          "unicode": "e041"
+        },
+        {
+          "name": "wifi",
+          "unicode": "e043"
+        },
+        {
+          "name": "onewayalt",
+          "unicode": "e044"
+        },
+        {
+          "name": "oneway",
+          "unicode": "e045"
+        },
+        {
+          "name": "accessible",
+          "unicode": "e046"
+        },
+        {
+          "name": "noimage",
+          "unicode": "e047"
+        },
+        {
+          "name": "snowflake",
+          "unicode": "e04b"
+        },
+        {
+          "name": "credit-card",
+          "unicode": "e04d"
+        },
+        {
+          "name": "tag",
+          "unicode": "e04e"
+        },
+        {
+          "name": "lock",
+          "unicode": "e04f"
+        },
+        {
+          "name": "comment",
+          "unicode": "e050"
+        },
+        {
+          "name": "bed",
+          "unicode": "e051"
+        },
+        {
+          "name": "bell",
+          "unicode": "e052"
+        },
+        {
+          "name": "required",
+          "unicode": "e056"
+        },
+        {
+          "name": "halfcircle",
+          "unicode": "e05b"
+        },
+        {
+          "name": "circle",
+          "unicode": "e05c"
+        },
+        {
+          "name": "returnarrow",
+          "unicode": "e05d"
+        },
+        {
+          "name": "power",
+          "unicode": "e05f"
+        }
+      ]
+    },
+    {
+      "type": "Actions",
+      "list": [
+        {
+          "name": "help",
+          "unicode": "e005"
+        },
+        {
+          "name": "info",
+          "unicode": "e00c"
+        },
+        {
+          "name": "infoalt",
+          "unicode": "e054"
+        },
+        {
+          "name": "shop",
+          "unicode": "e00e"
+        },
+        {
+          "name": "shopalt",
+          "unicode": "e02e"
+        },
+        {
+          "name": "settings",
+          "unicode": "e010"
+        }
+      ]
+    },
+    {
+      "type": "Products",
+      "list": [
+        {
+          "name": "packages",
+          "unicode": "e008"
+        },
+        {
+          "name": "packagesalt",
+          "unicode": "e031"
+        },
+        {
+          "name": "hotels",
+          "unicode": "e00d"
+        },
+        {
+          "name": "hotelsalt",
+          "unicode": "e030"
+        },
+        {
+          "name": "cruise",
+          "unicode": "e00f"
+        },
+        {
+          "name": "cruisealt",
+          "unicode": "e028"
+        },
+        {
+          "name": "cars",
+          "unicode": "e013"
+        },
+        {
+          "name": "carsalt",
+          "unicode": "e028"
+        },
+        {
+          "name": "activities",
+          "unicode": "e048"
+        },
+        {
+          "name": "activitiesalt",
+          "unicode": "e01b"
+        },
+        {
+          "name": "flights",
+          "unicode": "e01f"
+        },
+        {
+          "name": "flightsalt",
+          "unicode": "e027"
+        },
+        {
+          "name": "train",
+          "unicode": "e02f"
+        },
+        {
+          "name": "trainalt",
+          "unicode": "e032"
+        },
+        {
+          "name": "shield",
+          "unicode": "e033"
+        },
+        {
+          "name": "bus",
+          "unicode": "e059"
+        },
+        {
+          "name": "house",
+          "unicode": "e05e"
+        }
+      ]
+    },
+    {
+      "type": "Controls",
+      "list": [
+        {
+          "name": "pause",
+          "unicode": "e034"
+        },
+        {
+          "name": "play",
+          "unicode": "e035"
+        },
+        {
+          "name": "list",
+          "unicode": "e00a"
+        },
+        {
+          "name": "auth",
+          "unicode": "e00b"
+        },
+        {
+          "name": "toggle0",
+          "unicode": "e060"
+        },
+        {
+          "name": "toggle90",
+          "unicode": "e025"
+        },
+        {
+          "name": "toggle180",
+          "unicode": "e020"
+        },
+        {
+          "name": "toggle270",
+          "unicode": "e060"
+        },
+        {
+          "name": "expand",
+          "unicode": "e021"
+        },
+        {
+          "name": "collapse",
+          "unicode": "e062"
+        },
+        {
+          "name": "close",
+          "unicode": "e022"
+        },
+        {
+          "name": "print",
+          "unicode": "e023"
+        },
+        {
+          "name": "popup",
+          "unicode": "e024"
+        },
+        {
+          "name": "enlarge",
+          "unicode": "e039"
+        },
+        {
+          "name": "shrink",
+          "unicode": "e04a"
+        },
+        {
+          "name": "add",
+          "unicode": "e03e"
+        },
+        {
+          "name": "subtract",
+          "unicode": "e03d"
+        },
+        {
+          "name": "offcanvas",
+          "unicode": "e03c"
+        },
+        {
+          "name": "pagenext",
+          "unicode": "e03f"
+        },
+        {
+          "name": "pagebefore",
+          "unicode": "e061"
+        },
+        {
+          "name": "gridview",
+          "unicode": "e042"
+        },
+        {
+          "name": "search",
+          "unicode": "e049"
+        },
+        {
+          "name": "updown",
+          "unicode": "e04c"
+        },
+        {
+          "name": "headset",
+          "unicode": "e053"
+        },
+        {
+          "name": "reload",
+          "unicode": "e055"
+        },
+        {
+          "name": "share",
+          "unicode": "e057"
+        },
+        {
+          "name": "trash",
+          "unicode": "e058"
+        }
+      ]
+    },
+    {
+      "type": "Status",
+      "list": [
+        {
+          "name": "success",
+          "unicode": "e011"
+        },
+        {
+          "name": "warn",
+          "unicode": "e01e"
+        },
+        {
+          "name": "notification",
+          "unicode": "e05a"
+        }
+      ]
+    }
+  ]
+}

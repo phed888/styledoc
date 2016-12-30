@@ -1,0 +1,43 @@
+@import "jeet";
+
+.page-header {
+	font-family Arial, sans-serif;
+	height: 80px;
+	padding: 20px 0;
+	position: fixed;
+	width: 100%;
+	z-index: $z-page-header;
+	&.home {
+		background-color rgba(0, 0, 0, 0.5)
+		color #f2f2f2
+		.page-title, .section-title .button__navigation {
+			color: white;
+		}
+		.section-title span {
+			color: rgba(255, 255, 255, .5);
+		}
+}
+	&.atoms {
+		background-color: #4D6649;
+		color: #f2f2f2;
+	}
+}
+
+.section-title {
+	col(12/14, offset: 1/14);
+	position: absolute;
+	bottom: 20px;
+	span {
+		color: rgba(255, 255, 255, .5);
+		float: right;
+		font-size: 24px;
+	}
+}
+
+.page-title {
+	col(12/14, offset: 1/14);
+	font-family: 'Roboto', sans-serif;
+	font-size: 60px;
+	position: absolute;
+	bottom: 20px;
+}

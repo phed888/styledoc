@@ -1,0 +1,47 @@
+@import "../../voyager/00-utilities/_all-utilities.styl"
+
+.styleguide
+	background-color #f2f2f2
+.sg-introduction
+	t-16()
+	margin 20px 0
+.example-block
+	background-color $white
+	margin-top 20px
+	padding 20px
+	&.icons
+		float left
+		margin-right: 2%
+		width 14%
+		&:nth-child(5n+1)
+			margin-right 0
+		.example-title
+			border-bottom 1px solid $gray-lt
+	.example-title
+		t-18()
+		color #999999
+		padding 0 0 20px
+		width 100%
+	.icon-example
+		padding 20px 0
+		span:before
+			t-30()
+			color $gray-drk
+	.icon-unicode
+		t-14()
+		border-top 1px solid $gray-lt
+		color $gray-drk
+		padding 20px 0 0
+	.example-grid
+		clearfix()
+		.example-cell
+			float left
+			margin 0 5% 30px 0
+			max-height 100px
+			width 45%
+	.usage
+		t-12()
+		background-color #f8f8f8
+		color #666
+		margin 10px 0
+		padding 20px

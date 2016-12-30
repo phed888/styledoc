@@ -1,7 +1,77 @@
 {% macro active(activePage='home') %}
-    <nav>
-        <a href="#" class="{% if activePage == 'home' %}active{% endif %}">Home</a>
-        <a href="#" class="{% if activePage == 'about' %}active{% endif %}">About</a>
-        <a href="#" class="{% if activePage == 'contact' %}active{% endif %}">Contact</a>
+    <nav class="sg-nav">
+        <div class="nav-title">Voyager Styleguide</div>
+        <ul>
+            <li><a href="../../index.html" class="sg-nav-link {%if activePage == 'home' %} is-active {%endif %}">Home</a></li>
+            <li>
+                <p class="sg-nav-section">Atoms</p>
+                <ul>
+                    <li>
+                        <a href="../../html-pages/01-atoms/colors.html" class="sg-nav-link {%if activePage == 'colors' %} is-active {%endif %}">Colors</a>
+                    </li>
+                    <li>
+                        <a href="../../html-pages/01-atoms/fonts.html" class="sg-nav-link {%if activePage == 'fonts' %} is-active {%endif %}">Fonts</a>
+                    </li>
+                    <li>
+                        <a href="../../html-pages/01-atoms/icons.html" class="sg-nav-link {%if activePage == 'icons' %} is-active {%endif %}">Icons</a>
+                    </li>
+                    <li>
+                        <a href="../../html-pages/01-atoms/form-elements.html" class="sg-nav-link {%if activePage == 'form-elements' %} is-active {%endif %}">Form Elements</a>
+                    </li>
+                    <li>
+                        <a href="../../html-pages/01-atoms/buttons.html" class="sg-nav-link {%if activePage == 'buttons' %} is-active {%endif %}">Buttons</a>
+                    </li>
+                    <li>
+                        <a href="../../html-pages/01-atoms/grid.html" class="sg-nav-link {%if activePage == 'grid' %} is-active {%endif %}">Grid</a>
+                    </li>
+                    <li>
+                        <a href="../../html-pages/01-atoms/containers.html" class="sg-nav-link {%if activePage == 'containers' %} is-active {%endif %}">Containers</a>
+                    </li>
+
+                </ul>
+            </li>
+            <li>
+                <p class="sg-nav-section">Molecules</p>
+                <ul>
+                    <li>
+                        <a href="html-pages/02-molecules/forms.html" class="sg-nav-link {%if activePage == 'colors' %} is-active {%endif %}">Forms</a>
+                    </li>
+                    <li>
+                        <a href="html-pages/02-molecules/navigation.html" class="sg-nav-link {%if activePage == 'navigation' %} is-active {%endif %}">Navigation</a>
+                    </li>
+                    <li>
+                        <a href="html-pages/02-molecules/accordions.html" class="sg-nav-link {%if activePage == 'accordions' %} is-active {%endif %}">Accordions</a>
+                    </li>
+                    <li>
+                        <a href="html-pages/02-molecules/alerts.html" class="sg-nav-link {%if activePage == 'alerts' %} is-active {%endif %}">Alerts</a>
+                    </li>
+                    <li>
+                        <a href="html-pages/02-molecules/dates.html" class="sg-nav-link {%if activePage == 'dates' %} is-active {%endif %}">Dates</a>
+                    </li>
+
+                </ul>
+            </li>
+            <li>
+                <p class="sg-nav-section">Organisms</p>
+                <ul>
+                    <li>
+                        <a href="html-pages/02-molecules/forms.html" class="sg-nav-link {%if activePage == 'colors' %} is-active {%endif %}">Forms</a>
+                    </li>
+                    <li>
+                        <a href="html-pages/02-molecules/navigation.html" class="sg-nav-link {%if activePage == 'navigation' %} is-active {%endif %}">Navigation</a>
+                    </li>
+                    <li>
+                        <a href="html-pages/02-molecules/accordions.html" class="sg-nav-link {%if activePage == 'accordions' %} is-active {%endif %}">Accordions</a>
+                    </li>
+                    <li>
+                        <a href="html-pages/02-molecules/alerts.html" class="sg-nav-link {%if activePage == 'alerts' %} is-active {%endif %}">Alerts</a>
+                    </li>
+                    <li>
+                        <a href="html-pages/02-molecules/dates.html" class="sg-nav-link {%if activePage == 'dates' %} is-active {%endif %}">Dates</a>
+                    </li>
+
+                </ul>
+            </li>
+        </ul>
     </nav>
-{% endmacro %}
+{% endmacro %}}

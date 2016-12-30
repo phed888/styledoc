@@ -1,0 +1,31 @@
+// ***** Basic assumptions ***** 11/5/16
+
+$assumed-browser-default = 16
+$root = 12
+$l2s = 1.25
+
+// ***** Calculate Font Sizes ***** 11/5/16
+
+$fsroot = ($root / $assumed-browser-default) * 1em
+$fs10 = (10 / $root) * 1rem
+$fs12 = (12 / $root) * 1rem
+$fs14 = (14 / $root) * 1rem
+$fs16 = (16 / $root) * 1rem
+$fs18 = (18 / $root) * 1rem
+$fs20 = (20 / $root) * 1rem
+$fs24 = (24 / $root) * 1rem
+$fs30 = (30 / $root) * 1rem
+$fs36 = (36 / $root) * 1rem
+
+// ***** Calculate Line Heights ***** 11/5/16
+
+$lhroot = ($root * $l2s) * 1rem
+$lh10 = $fs10 * $l2s
+$lh12 = $fs12 * $l2s
+$lh14 = $fs14 * 1.5
+$lh16 = $fs16 * $l2s
+$lh18 = $fs18 * $l2s
+$lh20 = $fs20 * 1.25
+$lh24 = $fs24 * 1.2
+$lh30 = $fs30 * 1.175
+$lh36 = $fs36 * 1.15

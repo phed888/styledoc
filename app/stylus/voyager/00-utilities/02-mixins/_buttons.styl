@@ -1,0 +1,54 @@
+@import "../01-variables/_all-variables.styl"
+
+button-large()
+	t-14()
+	background-color $white
+	margin-right 10px
+	padding 5px 16px
+	text-decoration none
+	&:link, &:active, &:visited
+		color $btn-pri-font
+	&:hover
+		background-color $btn-pri-border
+		color $white
+	&:active
+		position relative
+		top 2px
+	&:disabled
+		cursor default
+		background-color #f0f0f0
+		color $gray-med-lt
+		border-color $gray-med-lt
+		top 0
+		
+button-pri()
+	button-large()
+	border 2px solid $btn-pri-border
+	font-weight bold
+	
+button-pri-disabled()
+	button-large()
+	border 2px solid $btn-pri-border
+	font-weight bold
+	&:link, &:active, &:visited, &:hover
+		cursor default
+		background-color #f0f0f0
+		color $gray-med-lt
+		border-color $gray-med-lt
+		top 0
+		
+button-sec()
+	button-large()
+	border 1px solid $btn-pri-border
+	font-weight normal
+	
+button-sec-disabled()
+	button-large()
+	border 1px solid $btn-pri-border
+	font-weight normal
+	&:link, &:active, &:visited, &:hover
+		cursor default
+		background-color #f0f0f0
+		color $gray-med-lt
+		border-color $gray-med-lt
+		top 0

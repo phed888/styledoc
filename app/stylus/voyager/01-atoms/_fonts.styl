@@ -1,0 +1,31 @@
+////////////// Imports all variables and mixins ////////////
+@import "../00-utilities/_all-utilities.styl"
+////////////////////////////////////////////////////////////
+webfont('Icons', 'VoyagerIcons-Regular', false, normal)
+html
+	t-root()
+h1, h2, h3, h4, h5, h6
+	font-weight bold
+h1
+	t-36()
+h2
+	t-30()
+h3
+	t-24()
+h4
+	t-20()
+h5
+	t-18()
+h6
+	t-16()
+.header--module
+	t-10()
+	border-bottom 1px solid $header-module-underline
+	color $header-module
+	padding-bottom 7px
+	text-transform uppercase
+.date
+	&.start-date__dow
+		t-18()
+		color $date-startdate-dow
+		font-weight bold

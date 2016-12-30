@@ -1,0 +1,101 @@
+<!-- buttons.html -->
+{% extends "app/templates/base.html" %}
+
+{% block title %}Voyager Styleguide Fonts{% endblock %}
+
+
+{% block header %}
+<!--Navigation-->
+{% import "app/templates/macros/nav-macro.nunjucks" as nav %}
+{{nav.active('fonts')}}
+<!--Header-->
+<div class="page-header atoms">
+	<div class="section-title">
+		<div class="button button__navigation"></div>
+		<span>Atoms</span>
+	</div>
+	<div class="page-title">Fonts</div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="sg-page-content-container">
+	<ul class="sg-page-navigation">
+		<li>Headlines</li>
+		<li>Body</li>
+		<li>Links</li>
+	</ul>
+	<div class="sg-page-content">
+		<section class="sg-page-section">
+			<div class="sg-page-section__title">Headline Styles</div>
+			<div class="example-block">
+				<div class="example-title">
+					h1
+				</div>
+				<h1>
+					The quick brown fox jumps over the lazy dog.
+				</h1>
+			</div>
+			<div class="example-block">
+				<div class="example-title">
+					h2
+				</div>
+				<h2>
+					The quick brown fox jumps over the lazy dog.
+				</h2>
+			</div>
+			<div class="example-block">
+					<div class="example-title">
+						h3
+					</div>
+				<h3>
+					The quick brown fox jumps over the lazy dog.
+				</h3>
+			</div>
+			<div class="example-block">
+					<div class="example-title">
+						h4
+					</div>
+				<h4>
+					The quick brown fox jumps over the lazy dog.
+				</h4>
+			</div>
+			<div class="example-block">
+					<div class="example-title">
+						h5
+					</div>
+				<h5>
+					The quick brown fox jumps over the lazy dog.
+				</h5>
+			</div>
+			<div class="example-block">
+					<div class="example-title">
+						h6
+					</div>
+				<h6>
+					The quick brown fox jumps over the lazy dog.
+				</h6>
+			</div>
+			<div class="example-block">
+				<div class="example-title">
+					.header--module
+				</div>
+				<div class="header--module">
+					The quick brown fox jumps over the lazy dog.
+				</div>
+			</div>
+		</section>
+		<section class="sg-page-section">
+			<div class="sg-page-section__title">Date Styles</div>
+			<div class="example-block">
+				<div class="example-title">
+					.start-date__dow
+				</div>
+				<div class="date start-date__dow">
+					Mon
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+{% endblock %}

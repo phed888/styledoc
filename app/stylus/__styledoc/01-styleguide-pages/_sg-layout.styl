@@ -1,0 +1,45 @@
+html {
+	font-family: Arial;
+}
+
+.sg-page-content-container {
+	col(12/14, offset: 1/14);
+	margin-top: 120px;
+	.sg-page-navigation {
+		col(2/12)
+		font-family 'Roboto Condensed', sans-serif
+		font-size 1.5rem
+		padding: 0 20px 0 0
+		position: fixed;
+		margin-top: 70px;
+		li {
+			margin-bottom: 10px;
+			padding-bottom: 10px;
+			a {
+				&:link, &:visited, &:active, &:hover {
+					color: #666666;
+					text-decoration: none;
+				}
+				&:hover {
+					color: #1d63af;
+				}
+			}
+		}
+	}
+	.sg-page-content {
+		col(10/12, offset: 2/12);
+		section {
+			&.sg-page-section {
+				col(10/10);
+				.sg-page-section__title {
+					color: #cccccc;
+					font-size: 2em;
+					font-weight: bold;
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+}
+
+

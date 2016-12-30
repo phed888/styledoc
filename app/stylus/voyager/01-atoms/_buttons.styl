@@ -1,0 +1,25 @@
+a, input[type="button"], input[type="submit"], button
+	&.button-pri
+		button-pri()
+		&.cancel
+			&:before
+				icon-font('\e022', 12px)
+				color $black
+				margin-right 5px
+	&.button-sec
+		button-sec()
+input[type="button"], input[type="submit"], button
+	cursor pointer
+	&.button-pri
+		padding 2px 16px
+	&.button-sec
+		padding 2px 16px
+a
+	&.button-pri, &.button-sec
+		line-height 32px
+	&.button-pri-disabled
+		button-pri-disabled()
+		line-height 32px
+	&.button-sec-disabled
+		button-sec-disabled()
+		line-height 32px
