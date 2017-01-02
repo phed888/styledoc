@@ -13,6 +13,7 @@ var gulpIf = require('gulp-if');
 var nunjucksRender = require('gulp-nunjucks-render');
 var data = require('gulp-data');
 var fs = require('fs');
+var rename = require('gulp-rename');
 
 //----------------------------------
 //----- Error
@@ -44,6 +45,32 @@ gulp.task('nunjucks', function() {
        .pipe(browserSync.reload({
            stream: true
        }));
+});
+
+//----------------------------------
+//----- Utilities
+//----------------------------------
+
+gulp.task('jsoncolors', function () {
+    return gulp.src('app/templates/utilities/01-stylus-generators/colors.nunjucks')
+        .pipe(data(function () {
+            return require('./app/data/colors2.json')
+        }))
+        .pipe(nunjucksRender())
+        .pipe(rename(function (path) {
+            path.basename = "_var-colors";
+            path.extname = ".styl"
+        }))
+        .pipe(gulp.dest('app/stylus/voyager/00-utilities/01-variables'));
+});
+
+gulp.task('jsonicons', function () {
+    return gulp.src('app/templates/utilities/01-stylus-generators/icons.nunjucks')
+        .pipe(data(function () {
+            return require('./app/data/icons.json')
+        }))
+        .pipe(nunjucksRender())
+        .pipe(gulp.dest('app/templates/utilities/02-generated-stylus'));
 });
 
 //----------------------------------
