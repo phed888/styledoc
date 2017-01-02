@@ -1,0 +1,17 @@
+<!-- icons.html -->
+{% extends "app/templates/utilities.nunjucks" %}
+
+{% block content %}
+	{% for category in icons %}
+		{% for icon in category.list %}
+			+e({{icon.name}}) {
+				&:before {
+					content: '\{{icon.unicode}}';
+					font-family: Icons;
+					font-size: 18px;
+					font-weight: normal;
+				}
+			}
+		{% endfor %}
+	{% endfor %}
+{% endblock %}

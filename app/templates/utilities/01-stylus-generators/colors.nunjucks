@@ -1,0 +1,10 @@
+<!-- buttons.html -->
+{% extends "app/templates/utilities.nunjucks" %}
+{% block content %}{% for category in colors %}
+//////////////////////////////
+///
+///   {{ category.type }}
+///
+//////////////////////////////{% for color in category.list %}
+      {{color.name}} = {{color.hex}};
+{% endfor %}{% endfor %}{% endblock %}
