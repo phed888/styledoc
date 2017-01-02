@@ -17,6 +17,7 @@
     "gulp-notify": "^2.2.0",
     "gulp-nunjucks-render": "^2.0.0",
     "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^1.9.1",
     "gulp-stylint": "^4.0.0",
     "gulp-stylus": "^2.6.0",
