@@ -1,0 +1,144 @@
+{
+  "colors": [
+    {
+      "type": "Text Colors",
+      "list": [
+        {
+          "name": "$text-dark",
+          "hex": "#222222"
+        },
+        {
+          "name": "$text-med",
+          "hex": "#666666"
+        },
+        {
+          "name": "$text-light",
+          "hex": "#888888"
+        },
+        {
+          "name": "$text-alert",
+          "hex": "#df7300"
+        },
+        {
+          "name": "$text-white",
+          "hex": "#ffffff"
+        },
+        {
+          "name": "$text-green",
+          "hex": "#008000"
+        }
+      ]
+    },
+    {
+      "type": "Container Colors",
+      "list": [
+        {
+          "name": "$itin-container-bg",
+          "hex": "#6fa7d0"
+        },
+        {
+          "name": "$itinerary-background",
+          "hex": "#eeeeee"
+        },
+        {
+          "name": "$segment-title-bg",
+          "hex": "#f0f0f0"
+        },
+        {
+          "name": "$itin-container-bg",
+          "hex": "#6fa7d0"
+        },
+        {
+          "name": "$itinerary-module-open",
+          "hex": "#dae8f3"
+        },
+        {
+          "name": "$open-module-hover",
+          "hex": "#f1f6fa"
+        }
+      ]
+    },
+    {
+      "type": "Button Colors",
+      "list": [
+        {
+          "name": "$button-dark",
+          "hex": "#006600"
+        },
+        {
+          "name": "$button-dark-hover",
+          "hex": "#003300"
+        },
+        {
+          "name": "$button-light",
+          "hex": "#ffffff"
+        },
+        {
+          "name": "$button-light-hover",
+          "hex": "#eeeeee"
+        },
+        {
+          "name": "$button-submit",
+          "hex": "#ffcb00"
+        },
+        {
+          "name": "$button-submit-hover",
+          "hex": "#fecc2d"
+        },
+        {
+          "name": "$button-disabled",
+          "hex": "#cccccc"
+        },
+        {
+          "name": "$new-link",
+          "hex": "#2790ff"
+        },
+        {
+          "name": "$new-link-hover",
+          "hex": "#0069d1"
+        }
+      ]
+    },
+    {
+      "type": "Alert Colors",
+      "list": [
+        {
+          "name": "$alert-error-bg",
+          "hex": "#006600"
+        },
+        {
+          "name": "$alert-error-border",
+          "hex": "#003300"
+        },
+        {
+          "name": "$button-light",
+          "hex": "#ffffff"
+        },
+        {
+          "name": "$button-light-hover",
+          "hex": "#eeeeee"
+        },
+        {
+          "name": "$button-submit",
+          "hex": "#ffcb00"
+        },
+        {
+          "name": "$button-submit-hover",
+          "hex": "#fecc2d"
+        },
+        {
+          "name": "$button-disabled",
+          "hex": "#cccccc"
+        },
+        {
+          "name": "$new-link",
+          "hex": "#2790ff"
+        },
+        {
+          "name": "$new-link-hover",
+          "hex": "#0069d1"
+        }
+      ]
+    }
+  ]
+}
