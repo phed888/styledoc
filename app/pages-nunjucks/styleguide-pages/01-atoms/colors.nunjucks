@@ -1,12 +1,12 @@
 <!-- buttons.html -->
-{% extends "app/templates/base.html" %}
+{% extends "layout.nunjucks" %}
 
 {% block title %}Voyager Styleguide Colors{% endblock %}
 
 
 {% block header %}
 <!--Navigation-->
-{% import "app/templates/macros/nav-macro.nunjucks" as nav %}
+{% import "macros/nav-macro.nunjucks" as nav %}
 {{nav.active('colors')}}
 <!--Header-->
 <div class="page-header atoms">

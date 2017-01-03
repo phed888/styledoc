@@ -8,8 +8,8 @@
         <title>
             {% block title %} {% endblock %}
         </title>
-        <link rel="stylesheet" href="../../styles/styledoc.css">
-        <link rel="stylesheet" href="../../styles/style-master.css">
+        <link rel="stylesheet" href="../../css/styledoc.css">
+        <link rel="stylesheet" href="../../css/style-master.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Condensed" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     </head>
