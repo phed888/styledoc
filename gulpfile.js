@@ -14,6 +14,8 @@ var nunjucksRender = require('gulp-nunjucks-render');
 var data = require('gulp-data');
 var fs = require('fs');
 var rename = require('gulp-rename');
+var del = require('del');
+var runSequence = require('run-sequence');
 
 //----------------------------------
 //----- Error
@@ -32,8 +34,22 @@ function customPlumber(errTitle) {
 //----------------------------------
 //----- Nunjucks
 //----------------------------------
-gulp.task('nunjucks', function() {
-   return gulp.src('app/pages/**/*.+(html|nunjucks)')
+gulp.task('nunjucks-home', function() {
+	return gulp.src('app/pages-nunjucks/index.nunjucks')
+		.pipe(customPlumber('Error running Nunjucks'))
+		.pipe(data(function () {
+			return JSON.parse(fs.readFileSync('./app/data/test.json'));
+		}))
+		.pipe(nunjucksRender({
+			path:['app/templates']
+		}))
+		.pipe(gulp.dest('app/'))
+		.pipe(browserSync.reload({
+			stream: true
+		}));
+});
+gulp.task('nunjucks-subpages', function() {
+   return gulp.src('app/pages-nunjucks/styleguide-pages/**/*.+(html|nunjucks)')
        .pipe(customPlumber('Error running Nunjucks'))
        .pipe(data(function () {
            return JSON.parse(fs.readFileSync('./app/data/test.json'));
@@ -41,7 +57,7 @@ gulp.task('nunjucks', function() {
        .pipe(nunjucksRender({
            path:['app/templates']
        }))
-       .pipe(gulp.dest('app'))
+       .pipe(gulp.dest('app/pages-html'))
        .pipe(browserSync.reload({
            stream: true
        }));
@@ -126,21 +142,47 @@ gulp.task('styledoc', function () {
 //----------------------------------
 //----- Watch
 //----------------------------------
-gulp.task('watch', ['browserSync', 'stylus'], function () {
+gulp.task('watch', ['browserSync', 'voyager', 'styledoc', 'nunjucks-home', 'nunjucks-subpages'], function () {
     gulp.watch('app/stylus/voyager/**/*.styl', ['voyager']);
     gulp.watch('app/stylus/__styledoc/**/*.styl', ['styledoc']);
     gulp.watch(
         [
         'app/templates/**/*',
-        'app/pages/**/*.+(html|nunjucks)',
+        'app/pages-nunjucks/styleguide-pages/**/*.+(html|nunjucks)',
         'app/data/**/*.json'
         ],
-        ['nunjucks']
-    )
+        ['nunjucks-subpages']
+    );
+	gulp.watch(
+		[
+			'app/templates/**/*',
+			'app/pages-nunjucks/index.nunjucks'
+		],
+		['nunjucks-home']
+	);
+});
+
+//----------------------------------
+//----- Clean old generated styles
+//----------------------------------
+gulp.task('clean:dev', function () {
+    return del.sync([
+        'app/css',
+        'app/pages-html',
+	    'app/*.html'
+    ]);
 });
 
 //----------------------------------
 //----- Default
 //----------------------------------
-// gulp.task('default')
+gulp.task('default', function (callback) {
+	runSequence(
+		'clean:dev',
+		['voyager', 'styledoc'],
+		['nunjucks-home', 'nunjucks-subpages'],
+		['browserSync', 'watch'],
+		callback
+	)
+});
 
