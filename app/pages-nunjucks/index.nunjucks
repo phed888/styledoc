@@ -1,14 +1,63 @@
-<!-- index.nunjucks -->
-
+<!-- index.html -->
 {% extends "layout.nunjucks" %}
 
-{% block content %}
-    <h1>This is the index page</h1>
-    <div class="gallery">
-        {% for image in images %}
-            <img src="{{ image.src }}" alt="{{ image.alt }}">
-        {% endfor %}
+{% block title %}Voyager Styleguide Home{% endblock %}
+
+{% block header %}
+    <!--Navigation-->
+    {% import "macros/nav-macro.nunjucks" as nav %}
+    {{nav.active('home')}}
+    <!--Header-->
+    <div class="page-header home">
+        <div class="section-title">
+            <span>Home</span>
+            <span class="button button__navigation"></span>
+        </div>
+        <div class="page-title">GCO UX Principles</div>
     </div>
-    {% import 'macros/nav-macro.nunjucks' as nav %}
-    {{ nav.active('home') }}
+    <div class="slider-container">
+        <ul class="slides-container">
+            <li class="slide slide-1">
+                <div class="image"></div>
+                <div class="text">
+                    <h1>Reliable and trustworthy experiences</h1>
+                    <p>Our users are confident that the information and processes they encounter are consistent, accurate and genuine, and that there are no surprises.</p>
+                </div>
+            </li>
+            <li class="slide slide-2">
+                <div class="image"></div>
+                <div class="text">
+                    <h1>Interactions are intuitive and efficient</h1>
+                    <p>Our users can effortlessly complete their tasks and resolve issues. We don't expose our corporate and organizational seams.</p>
+                </div>
+            </li>
+            <li class="slide slide-3">
+                <div class="image"></div>
+                <div class="text">
+                    <h1>We treat our users like humans</h1>
+                    <p>Our users deserve dynamic interactions relative to real people. Design elements are friendly, empathetic and approachable, and always include an authentic voice.</p>
+                </div>
+            </li>
+            <li class="slide slide-4">
+                <div class="image"></div>
+                <div class="text">
+                    <h1>Modern and simplified designs matter</h1>
+                    <p>We shield our users from complex workflows and policies with easy responsive designs. Create clean, consistent interactions that effortlessly travel across channels and platforms.</p>
+                </div>
+            </li>
+            <li class="slide slide-5">
+                <div class="image"></div>
+                <div class="text">
+                    <h1>We design for our users and not ourselves</h1>
+                    <p>Understanding our users from all angles so we can provide contextual, just-in-time actions that anticipate needs from end to end.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="page-content-container">
+
+    </div>
 {% endblock %}

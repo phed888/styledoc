@@ -10,24 +10,53 @@
 {{nav.active('colors')}}
 <!--Header-->
 <div class="page-header atoms">
-	<div class="section-title">
-		<div class="button button__navigation"></div>
-		<span>Atoms</span>
+	<div class="page-title">
+		<span>Colors</span>
+		<span class="button button__navigation"></span>
 	</div>
-	<div class="page-title">Colors</div>
+	<div class="section-title">
+		Atoms
+	</div>
 </div>
 {% endblock %}
 
 {% block content %}
-<div class="sg-page-content-container">
-	{% for color in colors %}
-		<div class="color-chip">
-			<div class="color-swatch {{ color.class }}"></div>
-			<div class="color-description">
-				<p class="variable">{{ color.var }}</p>
-				<p class="hex">{{ color.hex }}</p>
+	<div class="sg-page-content-container">
+		<ul class="sg-page-navigation">
+			<li><a href="#intro-text" class="scrollLink">Introduction</a></li>
+			<li><a class="scrollLink" href="#Text">Text</a></li>
+			<li><a class="scrollLink" href="#Container">Container</a></li>
+			<li><a class="scrollLink" href="#Button">Button</a></li>
+			<li><a class="scrollLink" href="#Alert">Alert</a></li>
+		</ul>
+		<div class="sg-page-content">
+			<div id="intro-text" class="sg-introduction">
+				Color is used strategically to deliver a consistent and learnable interface, which is paramount to engendering user trust.
+				Utilizing Mixins in Stylus we can assign each color to a variable which can be updated should the need arise – and elements reference this variable inherit the color change. This gives us great capability to adapt our system at scale.
 			</div>
+			{% for category in colors %}
+				<section class="sg-page-section">
+					<div id="{{category.type}}"class="sg-page-section__title">{{category.type}}</div>
+					{% for color in category.list %}
+						<div class="example-block colors">
+							<div class="color-swatch" style="background-color: {{ color.hex }};"></div>
+							<div class="color-description">
+								<p class="variable">{{ color.name }}</p>
+								<p class="hex">{{ color.hex }}</p>
+							</div>
+						</div>
+					{% endfor %}
+				</section>
+			{% endfor %}
+			{#{% for color in colors %}#}
+				{#<div class="color-chip">#}
+					{#<div class="color-swatch {{ color.class }}"></div>#}
+					{#<div class="color-description">#}
+						{#<p class="variable">{{ color.var }}</p>#}
+						{#<p class="hex">{{ color.hex }}</p>#}
+					{#</div>#}
+				{#</div>#}
+			{#{% endfor %}#}
 		</div>
-	{% endfor %}
-</div>
+	</div>
 {% endblock %}
