@@ -1,6 +1,8 @@
+@import "jeet";
 
-.color-chip {
-	col(2/12)
+.example-block.colors {
+	//column(1/4, $cycle: 4)
+	box-shadow 0 0 2px rgba(0, 0, 0, .25)
 	border-radius 3px
 	margin-top 20px
 	.color-swatch {
@@ -8,19 +10,17 @@
 	}
 	.color-description {
 		background-color white
-		padding 20px
+		padding 10px
 		.variable {
-			font-size 14px
+			t-12()
 			margin-bottom 5px
 		}
 			.hex {
-				color #999999
+				color $sgcolor-text-hex
 				font-size 10px
 				text-transform uppercase
 			}
 	}
 
 }
-.color-chip:nth-child(6n) {
-	margin-right 0
-}
+

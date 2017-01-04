@@ -1,45 +1,45 @@
-nav.sg-nav {
-	background-color: #ffffff;
-	border-right: 1px solid rgba(0, 0, 0, .33);
-	bottom: 0;
-	cursor: pointer;
-	font-family: 'Roboto Condensed', sans-serif;
-	left: 0;
-	padding: 20px;
-	position: absolute;
-	top: 0;
-	width: 200px;
-	z-index: $z-left-nav;
-	a {
-		font-size: 14px;
-		text-decoration: none;
-		&:link, &:visited, &:active {
-			color: #000;
-		}
-		&:hover {
-			color: olive;
-		}
-		&.is-active {
-			color: saddlebrown;
-			font-weight: bold;
-		}
-	}
-	.nav-title {
-		font-family: 'Roboto', sans-serif;
-		font-size: 18px;
-		font-weight: bold;
-	}
-	ul {
-		margin-top: 10px;
-		li {
-			padding: 5px 0;
-			p {
-				color: #cccccc;
-				font-size: 16px;
-				font-weight: bold;
-				margin-top 10px;
-			}
-		}
-	}
-}
+nav.sg-nav 
+	background-color #ffffff
+	border-right 1px solid $sgnav-border
+	bottom 0
+	cursor pointer
+	font-family 'Roboto Condensed', sans-serif
+	left 0
+	padding 20px
+	position fixed
+	top 0
+	width 200px
+	z-index $z-off-canvas-nav
+	a
+		t-14()
+		text-decoration none
+		&:link, &:visited, &:active
+			color $sgnav-text-link
+		
+		&hover
+			color $sgnav-text-hover
+		
+		&.is-active 
+			color $sgnav-text-active
+			font-weight bold
+		
+	
+	.nav-title 
+		font-family 'Roboto', sans-serif
+		font-size 18px
+		font-weight bold
+	
+	ul 
+		margin-top 10px
+		li 
+			padding 5px 0
+			p 
+				color $sgnav-section-title
+				font-size 16px
+				font-weight bold
+				margin-top 10px
+			
+		
+	
+
 

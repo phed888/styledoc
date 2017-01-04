@@ -1,43 +1,41 @@
-@import "jeet";
+@import "jeet"
 
-.page-header {
-	font-family Arial, sans-serif;
-	height: 80px;
-	padding: 20px 0;
-	position: fixed;
-	width: 100%;
-	z-index: $z-page-header;
-	&.home {
-		background-color rgba(0, 0, 0, 0.5)
+.page-header
+	font-family Arial, sans-serif
+	height 80px
+	padding 20px 0
+	position fixed
+	width 100%
+	z-index $z-page-header
+	&.home
+		background-color $sgheader-bg-title
 		color #f2f2f2
-		.page-title, .section-title .button__navigation {
-			color: white;
-		}
-		.section-title span {
-			color: rgba(255, 255, 255, .5);
-		}
-}
-	&.atoms {
-		background-color: #4D6649;
-		color: #f2f2f2;
-	}
-}
+		.page-title
+			color $sgheader-text-title
+		.section-title span
+			color $sgheader-text-sectiontitle
 
-.section-title {
-	col(12/14, offset: 1/14);
-	position: absolute;
-	bottom: 20px;
-	span {
-		color: rgba(255, 255, 255, .5);
-		float: right;
-		font-size: 24px;
-	}
-}
+	&.atoms
+		background-color $sgheader-bg-atoms
+		color $sgheader-text-atoms
 
-.page-title {
-	col(12/14, offset: 1/14);
-	font-family: 'Roboto', sans-serif;
-	font-size: 60px;
-	position: absolute;
-	bottom: 20px;
-}
+.section-title
+	column(12/14, $offset: 1/14)
+	color $sgheader-text-sectiontitle
+	position absolute
+	bottom 27px
+	font-size 24px
+	text-align right
+	
+	span
+		
+
+
+.page-title
+	column(12/14, $offset: 1/14)
+	bottom 20px
+	font-family 'Roboto', sans-serif
+	font-size 60px
+	position absolute
+	z-index 3
+

@@ -1,22 +1,26 @@
-@import "../../voyager/00-utilities/_all-utilities.styl"
 
 .styleguide
 	background-color #f2f2f2
 .sg-introduction
 	t-16()
+	line-height 2.5rem
+	color $text-med
 	margin 20px 0
 .example-block
-	background-color $white
+	background-color $sgbg-white
 	margin-top 20px
 	padding 20px
-	&.icons
+	&.icons, &.colors
 		float left
 		margin-right: 2%
-		width 14%
-		&:nth-child(5n+1)
+		width 17.75%
+		&:nth-child(4n+1)
 			margin-right 0
-		.example-title
-			border-bottom 1px solid $gray-lt
+	&.colors
+		padding 0
+		width 23%
+	.example-title
+		border-bottom 1px solid $sgnav-section-title
 	.example-title
 		t-18()
 		color #999999
@@ -26,10 +30,10 @@
 		padding 20px 0
 		span:before
 			t-30()
-			color $gray-drk
+			color $sgnav-text-link
 	.icon-unicode
 		t-14()
-		border-top 1px solid $gray-lt
+		border-top 1px solid $sgnav-section-title
 		color $gray-drk
 		padding 20px 0 0
 	.example-grid
@@ -41,7 +45,7 @@
 			width 45%
 	.usage
 		t-12()
-		background-color #f8f8f8
+		background-color $sgbg-usage
 		color #666
 		margin 10px 0
 		padding 20px
