@@ -52,7 +52,10 @@ gulp.task('nunjucks-subpages', function() {
    return gulp.src('app/pages-nunjucks/styleguide-pages/**/*.+(html|nunjucks)')
        .pipe(customPlumber('Error running Nunjucks'))
        .pipe(data(function () {
-           return JSON.parse(fs.readFileSync('./app/data/test.json'));
+           return JSON.parse(fs.readFileSync('./app/data/colors2.json'));
+       }))
+       .pipe(data(function () {
+           return JSON.parse(fs.readFileSync('./app/data/icons.json'));
        }))
        .pipe(nunjucksRender({
            path:['app/templates']
@@ -78,6 +81,19 @@ gulp.task('jsoncolors', function () {
             path.extname = ".styl"
         }))
         .pipe(gulp.dest('app/stylus/voyager/00-utilities/01-variables'));
+});
+
+gulp.task('jsoncolors-styledoc', function () {
+    return gulp.src('app/templates/utilities/01-stylus-generators/colors.nunjucks')
+        .pipe(data(function () {
+            return require('./app/data/sgcolors.json')
+        }))
+        .pipe(nunjucksRender())
+        .pipe(rename(function (path) {
+            path.basename = "_var-sgcolors";
+            path.extname = ".styl"
+        }))
+        .pipe(gulp.dest('app/stylus/__styledoc/00-styleguide-utilities/01-variables'));
 });
 
 gulp.task('jsonicons', function () {
