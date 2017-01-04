@@ -1,7 +1,7 @@
 {
   "colors": [
     {
-      "type": "Text Colors",
+      "type": "Textgup",
       "list": [
         {
           "name": "$text-dark",
@@ -30,7 +30,7 @@
       ]
     },
     {
-      "type": "Container Colors",
+      "type": "Container",
       "list": [
         {
           "name": "$itin-container-bg",
@@ -59,7 +59,7 @@
       ]
     },
     {
-      "type": "Button Colors",
+      "type": "Button",
       "list": [
         {
           "name": "$button-dark",
@@ -100,43 +100,39 @@
       ]
     },
     {
-      "type": "Alert Colors",
+      "type": "Alert",
       "list": [
         {
           "name": "$alert-error-bg",
-          "hex": "#006600"
+          "hex": "#fad4d4"
         },
         {
           "name": "$alert-error-border",
-          "hex": "#003300"
+          "hex": "#b80000"
         },
         {
-          "name": "$button-light",
-          "hex": "#ffffff"
+          "name": "$alert-success-bg",
+          "hex": "#d2e6c8"
         },
         {
-          "name": "$button-light-hover",
-          "hex": "#eeeeee"
+          "name": "$alert-success-border",
+          "hex": "#2f7000"
         },
         {
-          "name": "$button-submit",
-          "hex": "#ffcb00"
+          "name": "$alert-info-bg",
+          "hex": "#cbdef2"
         },
         {
-          "name": "$button-submit-hover",
-          "hex": "#fecc2d"
+          "name": "$alert-info-border",
+          "hex": "#3b4c5b"
         },
         {
-          "name": "$button-disabled",
-          "hex": "#cccccc"
+          "name": "$alert-warning-bg",
+          "hex": "#f0dcb4"
         },
         {
-          "name": "$new-link",
-          "hex": "#2790ff"
-        },
-        {
-          "name": "$new-link-hover",
-          "hex": "#0069d1"
+          "name": "$alert-warning-border",
+          "hex": "#7a5505"
         }
       ]
     }

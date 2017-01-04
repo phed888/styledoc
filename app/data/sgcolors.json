@@ -1,0 +1,83 @@
+{
+  "colors": [
+    {
+      "type": "Header Colors",
+      "list": [
+        {
+          "name": "$sgheader-bg-title",
+          "hex": "rgba(0, 0, 0, .5)"
+        },
+        {
+          "name": "$sgheader-text-title",
+          "hex": "#ffffff"
+        },
+        {
+          "name": "$sgheader-text-sectiontitle",
+          "hex": "rgba(255, 255, 255, .5)"
+        },
+        {
+          "name": "$sgheader-bg-atoms",
+          "hex": "#4D6649"
+        },
+        {
+          "name": "$sgheader-text-atoms",
+          "hex": "#f2f2f2"
+        },
+        {
+          "name": "$pagenav-link",
+          "hex": "#666666"
+        },
+        {
+          "name": "$pagenav-hover",
+          "hex": "#1d63af"
+        },
+        {
+          "name": "$sgcolor-text-hex",
+          "hex": "#999999"
+        }
+      ]
+    },
+    {
+      "type": "Side Navigation Colors",
+      "list": [
+        {
+          "name": "$sgnav-section-title",
+          "hex": "#cccccc"
+        },
+        {
+          "name": "$sgnav-text-link",
+          "hex": "#000000"
+        },
+        {
+          "name": "$sgnav-text-hover",
+          "hex": "#808000"
+        },
+        {
+          "name": "$sgnav-text-active",
+          "hex": "#8b4513"
+        },
+        {
+          "name": "$sgnav-border",
+          "hex": "rgba(0, 0, 0, .33)"
+        }
+      ]
+    },
+    {
+      "type": "Container Colors",
+      "list": [
+        {
+          "name": "$sgbg-white",
+          "hex": "#ffffff"
+        },
+        {
+          "name": "$sgbg-usage",
+          "hex": "#f8f8f8"
+        },
+        {
+          "name": "$segment-title-bg",
+          "hex": "#f0f0f0"
+        }
+      ]
+    }
+  ]
+}
