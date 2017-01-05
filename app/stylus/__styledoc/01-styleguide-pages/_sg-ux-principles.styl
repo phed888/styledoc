@@ -1,7 +1,7 @@
 @import "jeet";
 
 .slider-container
-
+	position relative
 	.slides-container
 		.slide
 			.image
@@ -35,21 +35,24 @@
 					background-size cover
 			.text
 				column(12/14, $offset: 1/14)
-				padding 20px 0
+				padding 20px 2.8%
 				position relative
-				&:after, &:before
+				width 79.6%
+				&:before, &:after {
+					cursor pointer
 					font-family Icons
-					font-size 18px
+					font-size 24px
 					font-weight normal
+					color $text-dark
 					position absolute
-					top 30px
-				&:after
-					content '\e025'
-					right -40px
+					top 27px
+				}
 				&:before
 					content '\e060'
-					left -40px
-
+					left -7px
+				&:after
+					content '\e025'
+					right -7px
 				h1
 					display inline-block
 					font-family 'Roboto', sans-serif;
@@ -62,5 +65,25 @@
 					color rgba(0, 0, 0, 1 )
 					font-size 18px
 					line-height 23px
-
+	//.slide-control
+	//	height 50px
+	//	position absolute
+	//	top 530px
+	//	width 50px
+	//	.back, .forward
+	//		&:before
+	//			font-family Icons
+	//			font-size 18px
+	//			font-weight normal
+	//			color $text-dark
+	//			position absolute
+	//			top 30px
+	//	.back
+	//		left 0
+	//		&:before
+	//			content '\e060'
+	//	.forward
+	//		right 0
+	//		&:before
+	//			content '\e025'
 
