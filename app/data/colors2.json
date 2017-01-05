@@ -1,7 +1,7 @@
 {
   "colors": [
     {
-      "type": "Textgup",
+      "type": "Text",
       "list": [
         {
           "name": "$text-dark",
